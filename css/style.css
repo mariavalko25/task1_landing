@@ -374,3 +374,23 @@ footer {
     color: #fff;
     background: rgba(0,0,0,0.4);
 }
+
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+body::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+	
+}
+ 
+body::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #ff004d;
+    -webkit-box-shadow: 6.5px 11.258px 15px 7px rgba(250,0,0,.17);
+}
+body::-webkit-scrollbar-thumb:window-inactive {
+	background: #ff004d;
+}
