@@ -86,6 +86,8 @@ h1 {
 	-webkit-text-fill-color: transparent;
 }
 
+/* ANIMATION */
+
 @keyframes flow {
 	0% {
 		background-position: 0 50%;
@@ -394,6 +396,8 @@ footer {
 }
 
 
+/* CUSTOM SCROLLBAR */
+
 body::-webkit-scrollbar {
     width: 12px;
 }
@@ -412,6 +416,9 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:window-inactive {
 	background: #ff004d;
 }
+
+
+/* ADAPTIVE */
 
 @media only screen and (max-width: 1200px) {
 	.container {
