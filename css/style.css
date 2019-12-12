@@ -67,9 +67,15 @@ header {
 }
 
 .top-menu {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	padding: 60px 0;
     font-size: 18px;
 }
@@ -78,7 +84,10 @@ h1 {
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 30px;
-	animation: flow 3s ease-in-out infinite;
+	-webkit-animation: flow 3s ease-in-out infinite;
+	        animation: flow 3s ease-in-out infinite;
+	background: -webkit-gradient(linear, right top, left top, from(#000), color-stop(#000), to(#ff004d));
+	background: -o-linear-gradient(right, #000, #000, #ff004d);
 	background: linear-gradient(-90deg, #000, #000, #ff004d);
 	background-size: 300%;
 	-webkit-background-clip: text;
@@ -87,6 +96,18 @@ h1 {
 }
 
 /* ANIMATION */
+
+@-webkit-keyframes flow {
+	0% {
+		background-position: 0 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0 50%;
+	}
+}
 
 @keyframes flow {
 	0% {
@@ -101,6 +122,8 @@ h1 {
 }
 
 .nav ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -118,6 +141,8 @@ h1 {
 	text-decoration: none;
 	color: #000;
 	cursor: pointer;
+	-webkit-transition: 0.4s all ease;
+	-o-transition: 0.4s all ease;
 	transition: 0.4s all ease;
 }
 
@@ -132,10 +157,11 @@ h1 {
 	bottom: -5px;
     -webkit-transition: width .3s ease-in-out;
     -moz--transition: width .3s ease-in-out;
+    -o-transition: width .3s ease-in-out;
     transition: width .3s ease-in-out;
     -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
 }
 
 .nav a:hover{
@@ -155,24 +181,41 @@ h2 {
 }
 
 .hobbies{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 	padding: 100px 0;
 }
 
 .hobbies-items {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 	margin-top: 65px;
-	box-shadow: 6.5px 11.258px 15px 7px rgba(250,0,0,.17);
+	-webkit-box-shadow: 6.5px 11.258px 15px 7px rgba(250,0,0,.17);
+	        box-shadow: 6.5px 11.258px 15px 7px rgba(250,0,0,.17);
 	padding: 50px 0;
 }
 
 .hobbies-items div{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	width: 50%;
 	margin-bottom: 50px;
 	font-size: 18px;
@@ -206,9 +249,14 @@ h2 {
 }
 
 .gallery-box {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 	margin-top: 60px;
 }
 
@@ -227,10 +275,13 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
+    -webkit-transition: all 1000ms;
+    -o-transition: all 1000ms;
     transition: all 1000ms;
 	background-size: cover;
 	cursor: pointer;
-	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	        filter: grayscale(100%);
 }
 
 .gallery-box div:nth-of-type(1) div{
@@ -264,8 +315,11 @@ h2 {
 }
 
 .gallery-box div:hover div{
-	filter: grayscale(0);
-	transform: scale(1.2);
+	-webkit-filter: grayscale(0);
+	        filter: grayscale(0);
+	-webkit-transform: scale(1.2);
+	    -ms-transform: scale(1.2);
+	        transform: scale(1.2);
 }
 
 .connection {
@@ -273,9 +327,16 @@ h2 {
 }
 
 .form {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	margin-top: 80px;
 }
 
@@ -296,10 +357,12 @@ h2 {
 	line-height: 45px;
 	padding-left: 15px;
 	font-size: 16px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     border-radius: 10px;
     background-color: white;
-	box-shadow: 6.5px 11.258px 15px 7px rgba(250,0,0,.17);
+	-webkit-box-shadow: 6.5px 11.258px 15px 7px rgba(250,0,0,.17);
+	        box-shadow: 6.5px 11.258px 15px 7px rgba(250,0,0,.17);
     color: #000;
     outline: none;
     border: none;
@@ -317,13 +380,17 @@ h2 {
 	cursor: pointer;
 	color: #fff;
 	font-size: 18px;
+	-webkit-transition: all 0.6s;
+	-o-transition: all 0.6s;
 	transition: all 0.6s;
-	box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 }
 
 .form .btn:hover {
 	background-color:#fc3a75;
-	box-shadow: 6.5px 11.258px 15px 7px rgba(250,0,0,.17);
+	-webkit-box-shadow: 6.5px 11.258px 15px 7px rgba(250,0,0,.17);
+	        box-shadow: 6.5px 11.258px 15px 7px rgba(250,0,0,.17);
 }
 
 .social {
@@ -332,16 +399,28 @@ h2 {
 }
 
 .social-items {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-around;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
 	margin-top: 60px;
 }
 
 .social-items div{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .social-items img{
@@ -355,6 +434,8 @@ h2 {
 	text-decoration: none;
 	color: #000;
 	cursor: pointer;
+	-webkit-transition: 0.4s all ease;
+	-o-transition: 0.4s all ease;
 	transition: 0.4s all ease;
 	font-size: 16px;
 }
@@ -370,10 +451,11 @@ h2 {
 	bottom: -5px;
     -webkit-transition: width .3s ease-in-out;
     -moz--transition: width .3s ease-in-out;
+    -o-transition: width .3s ease-in-out;
     transition: width .3s ease-in-out;
     -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
 }
 
 .social-items  a:hover,
@@ -408,7 +490,6 @@ body::-webkit-scrollbar-track {
 }
  
 body::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
     border-radius: 10px;
     background: #ff004d;
     -webkit-box-shadow: 6.5px 11.258px 15px 7px rgba(250,0,0,.17);
@@ -425,7 +506,8 @@ body::-webkit-scrollbar-thumb:window-inactive {
 		max-width: 960px;
 	}
 	.gallery-box {
-		justify-content: space-around;
+		-ms-flex-pack: distribute;
+		    justify-content: space-around;
 	}
 }
 
@@ -453,7 +535,9 @@ body::-webkit-scrollbar-thumb:window-inactive {
 		padding: 55px 0;
 	}
 	.hobbies-items {
-		justify-content: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 		margin-top: 45px;
 		padding: 40px 0;
 	}
@@ -519,7 +603,10 @@ body::-webkit-scrollbar-thumb:window-inactive {
 		max-width: 400px;
 	}
 	.nav ul {
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 		line-height: 1.2;
 	}
 	.hobbies-items {
@@ -535,7 +622,9 @@ body::-webkit-scrollbar-thumb:window-inactive {
 		max-width: 310px;
 	}
 	.top-menu {
-		justify-content: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 		padding: 25px 0;
 	}
 	h2 {
@@ -559,7 +648,10 @@ body::-webkit-scrollbar-thumb:window-inactive {
 	}
 	.social-items {
 		margin-top: 28px;
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 	}
 	.social-items div {
 		margin-bottom: 38px;
