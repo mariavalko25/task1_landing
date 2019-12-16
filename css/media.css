@@ -158,7 +158,7 @@
 		    -ms-flex-direction: column;
 		        flex-direction: column;
 	}
-	.social-items a {
+	.social-items div {
 		margin-bottom: 38px;
 	}
 	.social-items a:last-of-type {
